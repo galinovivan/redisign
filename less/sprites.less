@@ -1,0 +1,59 @@
+.stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+  background-position: @x @y;
+  width: @width;
+  height: @height;
+}
+
+.sprite_payment {
+  background: url(../img/sprite_payment.png) no-repeat;
+  display: block;
+
+  &.sprite-alfa {
+    .stitches-sprite(-5px, -5px, 23px, 35px);
+  }
+
+  &.sprite-bez {
+    .stitches-sprite(-38px, -5px, 111px, 34px);
+  }
+
+  &.sprite-master_card {
+    .stitches-sprite(-38px, -49px, 52px, 35px);
+  }
+
+  &.sprite-sb {
+    .stitches-sprite(-5px, -94px, 100px, 28px);
+  }
+
+  &.sprite-terminal {
+    .stitches-sprite(-5px, -132px, 146px, 33px);
+  }
+
+  &.sprite-visa {
+    .stitches-sprite(-100px, -49px, 71px, 23px);
+  }
+
+  &.sprite-webmoney {
+    .stitches-sprite(-159px, -5px, 116px, 30px);
+  }
+
+  &.sprite-yandex {
+    .stitches-sprite(-181px, -45px, 118px, 38px);
+  }
+}
+
+
+
+.sprite_arrow {
+  background-image: url('../img/sprite_arrow.png');    background-repeat: no-repeat;
+  display: block;
+
+  &.sprite-array_left {
+    .stitches-sprite(-5px, -5px, 18px, 32px);
+  }
+
+  &.sprite-arrow_right {
+    .stitches-sprite(-33px, -5px, 18px, 32px);
+    display: inline-block;
+  }
+}
+

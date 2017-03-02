@@ -1,0 +1,41 @@
+.pagination_block {
+  padding: @paginationPadding;
+  border-top: 1px solid @lightBorderColor;
+  border-bottom: 1px solid @lightBorderColor;
+  .pagination {
+    ul {
+      li {
+        box-sizing: border-box;
+        width: @paginationWidth;
+        height: @paginationHeight;
+        .flex_align(center);
+        display: inline-flex;
+        a {
+          text-decoration: none;
+          color: @paginationFontColor;
+          font-size: @paginationFontSize;
+          font-family: @paginationFontFamily;
+        }
+        &.active {
+          border: @paginationBorder;
+          a {
+            color: @paginationActiveFontColor;
+          }
+        }
+        &.arrow_icon {
+          @margin: 20px;
+          display: inline-block;
+          vertical-align: middle;
+          &.left {
+            margin-right: @margin;
+            .align(left);
+          }
+          &.right {
+            margin-left: @margin;
+            .align(right);
+          }
+        }
+      }
+    }
+  }
+}

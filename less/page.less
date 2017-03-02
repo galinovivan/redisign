@@ -1,0 +1,135 @@
+html {
+  height: 100%;
+  min-height: 100%;
+}
+body {
+  min-height: 100%;
+  position: relative;
+}
+main {
+  height: 100%;
+}
+
+
+.main_wrapper {
+  padding: 40px 60px 0 60px;
+  float: left;
+  width: 83%;
+  .page_heading {
+    margin-bottom: 35px;
+  }
+  .clearfix();
+  .sort_row {
+    margin-bottom: 45px;
+    .site_category_list {
+      ul {
+        li {
+          padding: 12px 25px;
+          a {
+            font-size: @mediumFontSize;
+            font-family: @boldFont;
+            text-decoration: none;
+            color: @black;
+            .link_hover();
+          }
+          &.active {
+            border: @baseBorder;
+            a {
+              color: @baseColor;
+            }
+          }
+        }
+      }
+    }
+    .search {
+      padding-left: 20px;
+      .button {
+        margin-left: -4px;
+      }
+    }
+  }
+  .templates_block {
+    .template_item {
+      margin-bottom: 35px;
+      padding: 0 20px;
+    .thumb {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        }
+      .overlay_block {
+        .transform(scale(0));
+        background: @overlayColor;
+        display: block;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        .transition(opacity, 0.3s);
+        .flex_align(center);
+        flex-direction: column;
+        .button {
+          margin-bottom: 20px;
+        }
+      }
+      &:hover {
+        .overlay_block {
+          .transform(scale(1));
+          opacity: 1;
+        }
+      }
+      @media screen and (max-width: 1380px) {
+        height: 250px;
+      }
+      @media screen and (max-width: 1250px) {
+        height: 200px;
+      }
+    }
+      .heading {
+        .align();
+        padding: 30px 0;
+      }
+    }
+  }
+  .pagination_block {
+    .text_block {
+      padding-right: 40px;
+      p {
+        line-height: @mediumLineHeight;
+      }
+    }
+  }
+  .text_panel {
+    p {
+      line-height: @mediumLineHeight;
+    }
+    .text_description {
+      margin-bottom: 50px;
+      padding-right: 50px;
+    }
+    .text_heading {
+      margin-bottom: 40px;
+      .align();
+    }
+    .text_content {
+      margin-top: 50px
+    }
+    .font_bold {
+      padding: 0 60px;
+    }
+  }
+  @media screen and (max-width: 1571px) {
+    padding: 40px 30px 0 30px;
+    .sort_row {
+      .search {
+        padding-left: 0;
+      }
+    }
+  }
+}

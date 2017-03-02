@@ -1,0 +1,22 @@
+input {
+  &.base_input {
+    outline: none;
+    padding: @inputPadding;
+    height: @inputHeight;
+    .clear_browser_style();
+    .border_radius(0);
+    .placeholder_style();
+    .moz_placeholder_style();
+  }
+  &.float_input {
+    background: @inputBackground;
+    border: none;
+  }
+  &.medium {
+    width: @inputMediumWidth;
+    @media screen and (max-width: 1430px) {
+    width: @inputMediumWidth * 0.8;
+    }
+  }
+
+}

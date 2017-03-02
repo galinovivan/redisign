@@ -1,0 +1,40 @@
+.button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  height: @buttonHeight;
+  font-weight: @buttonFontWeight;
+  font-family: @buttonFontFamily;
+  font-size: @butttonFontSize;
+  padding: @buttonPadding;
+  .clear_browser_style();
+  &.base {
+    background: @baseButtonBackground;
+    color: @baseButtonColor;
+    .base_button_hovers();
+  }
+  &.transparent {
+    background: @transparent;
+    border: 1px solid @baseColor;
+    color: @baseColor;
+    height: @buttonHeight - 1;
+    .filling_hover();
+  }
+  &.red {
+    background: @altBaseColor;
+    color: @white;
+    .red_button_hover();
+  }
+  &.medium {
+    width: @mediumButtonWidth;
+  }
+  &.small {
+    width: @smallButtonWidth;
+  }
+  &.large {
+    width: @largeButtonWidth;
+    font-size: @baseFontSize;
+    height: @buttonLargeHeight;
+    font-family: @boldFont;
+  }
+}

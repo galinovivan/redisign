@@ -1,0 +1,139 @@
+
+
+
+
+.align(@align: center) {
+  text-align: center;
+}
+
+
+
+
+
+.makeGrid(@index) {
+  width: 100% / (12 / @index);
+}
+
+.makeOffset(@index) {
+  margin-left: 100% / (12 / @index);
+}
+
+.clearfix() {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.margin_align() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clear_browser_style() {
+  -webkit-appearance: none;
+}
+
+.placeholder_style(@color: @inputFontColor, @size: @inputFontSize) {
+  &::-webkit-input-placeholder {
+    color: @color;
+    font-size: @size;
+  }
+}
+.moz_placeholder_style(@color: @inputFontColor, @size: @inputFontSize) {
+  &::-moz-placeholder {
+    color: @color;
+    font-size: @size;
+  }
+  &:-moz-placeholder {
+    color: @color;
+    font-size: @size;
+  }
+}
+
+.flex_align(@space: space-between) {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: @space;
+  align-items: center;
+}
+
+
+//css3
+
+.transition(@prop: all, @duration: 0.2s) {
+  transition: @prop @duration;
+  -webkit-transition: @prop @duration;
+  -moz-transition: @prop @duration;
+  -o-transition: @prop @duration;
+}
+
+.border_radius(@radius) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+.transform(@prop) {
+  transform: @prop;
+  -webkit-transform: @prop;
+  -moz-transform: @prop;
+  -o-transform: @prop;
+  -ms-transform: @prop;
+}
+
+.shadow(@prop: @baseShadow) {
+  box-shadow: @prop;
+  -webkit-box-shadow: @prop;
+  -moz-box-shadow: @prop;
+  -o-box-shadow: @prop;
+}
+
+
+
+// hovers
+
+.link_hover(@color: @baseColor) {
+  .transition();
+  &:hover {
+    color: @color;
+  }
+}
+
+.shadow_hover(@shadow: @hoverShadow) {
+  .transition(all, @baseTransitionDurations);
+    &:hover {
+      .shadow(@shadow);
+    }
+}
+
+.transparent_button_hover() {
+  .filling_hover();
+}
+
+.filling_hover(@background: @baseColor, @color: @white) {
+.transition(all, @baseTransitionDurations);
+  &:hover {
+    background: @background;
+    color: @color;
+  }
+}
+
+.base_button_hovers() {
+  .transused_background_hover();
+}
+.red_button_hover() {
+  .transused_background_hover(@altBaseColor);
+}
+
+.transused_background_hover(@color: @baseColor, @duration: @baseTransitionDurations) {
+  .transition(all, @duration);
+  &:hover {
+    background: lighten(@color, @lightPersentForTransusedHover);
+  }
+}
