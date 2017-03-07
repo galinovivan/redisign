@@ -1,0 +1,28 @@
+.nav {
+  li {
+    a {
+      font-size: @navFontSize;
+      color: @navFontColor;
+      text-decoration: none;
+    }
+  }
+  @media screen and (max-width: @xsScreen) {
+    padding: 20px 0;
+    li {
+      margin-bottom: @navMobileMargin;
+      border-bottom: 1px solid lighten(@mobileNavBackground, 30%);
+      a {
+        font-size: @mobileNavFontSize;
+      }
+    }
+  }
+}
+
+
+.nav_toggle {
+  .navToggle();
+}
+.mobile_nav {
+  background: @mobileNavBackground;
+
+}

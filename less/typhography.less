@@ -10,9 +10,18 @@ li {
 h1 {
   font-size: @h1FontSize;
   font-family: @h1Font;
+  @media screen and (max-width: @xsScreen) {
+    font-size: @xsH1FontSize;
+  }
 }
 h2 {
   font-size: @h2FontSize;
+  @media screen and (max-width: @xsScreen) {
+    font-size: @mobileH2FontSize;
+  }
+  @media screen and (max-width: 400px) {
+    font-size: @mobileH2FontSize * 0.7;
+  }
 }
 h5 {
   font-size: @h5FontSize;

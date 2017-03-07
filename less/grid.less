@@ -1,6 +1,13 @@
 @md: 1150px;
 
-
+html {
+  height: 100%;
+  min-height: 100%;
+}
+body {
+  position: relative;
+  min-height: 100%;
+}
 
 div {
   box-sizing: border-box;
@@ -16,9 +23,21 @@ div {
 .float_right {
   float: right;
 }
-
+.hidden {
+  display: none;
+}
 .block_wrapper {
   width: 100%;
+  @media screen and (max-width: @smScreen) {
+    padding: @xsGridPadding;
+  }
+}
+
+.flex_wrapper {
+  .flex_align();
+  @media screen and (max-width: @smScreen) {
+    padding: @xsGridPadding;
+  }
 }
 
 div[class*="grid"] {
@@ -109,6 +128,12 @@ div[class*="grid"] {
   }
   .md_grid_6 {
     .makeGrid(6);
+  }
+}
+
+@media screen and (max-width: @xsScreen) {
+  .xs_grid_12 {
+    .makeGrid(12);
   }
 }
 

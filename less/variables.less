@@ -1,3 +1,7 @@
+@xsScreen: 600px;
+@smScreen: 991px;
+@xsGridPadding: 0 20px;
+
 // fonts
 @baseFont: 'open-sans';
 @lightFont: 'open-sans-light';
@@ -12,8 +16,10 @@
 @baseFontSize: 14px;
 @mediumFontSize: @baseFontSize + 2;
 @h1FontSize: 46px;
+@xsH1FontSize: @h1FontSize * 0.65;
 @h2FontSize: @h1FontSize - 16;
 @h5FontSize: @mediumFontSize + 1;
+@mobileH2FontSize: @baseFontSize + 10;
 
 
 
@@ -29,6 +35,9 @@
 @altBaseColor: #e2353b;
 @backgroundGray: #f6f6f6;
 @borderColor: #2b2b2b;
+@grayBorder: #dcdcdc;
+@footerColor: @white;
+@footerBackground: #3d4255;
 @lightBorderColor: #f2f2f2;
 @transparent: transparent;
 @overlayColor: rgba(255, 255, 255, .9);
@@ -38,8 +47,13 @@
 
 
 
+// header
+@headerBackground: #32333a;
+@headerPadding: 20px;
+@headerHeight: 65px;
 
-
+//footer
+@mobileFooterHeight: 300px;
 
 // inputs
 @inputPadding: 15px;
@@ -48,6 +62,12 @@
 @inputFontColor: @black;
 @inputFontSize: @baseFontSize;
 @inputHeight: 45px;
+@largeSelectWidth: 100%;
+@selectBaseColor: @baseColor;
+@selectFontSize: @baseFontSize + 4;
+@selectContentBackground: @white;
+@selectContentColor: @black;
+@selectContentFontSize: @selectFontSize;
 
 // buttons
 @smallButtonWidth: 105px;
@@ -81,6 +101,7 @@
 // shadow
 @baseShadow:  0px 0px 16px 1px @shadowColor;
 @hoverShadow: 0px 16px 20px 1px @hoverShadowColor;
+@selectShadow: 0px 10px 16px 1px @shadowColor;
 
 
 //decor
@@ -89,3 +110,15 @@
 @decorBorderHeight: 2px;
 @decoreBorderMarginBottom: 30px;
 @triangleWeight: 7px;
+
+
+// nav
+@navFontColor: @white;
+@navFontSize: @baseFontSize - 2;
+@mobileNavFontSize: @navFontSize + 4;
+@navToggleWidth: 28px;
+@navToggleBackground: @white;
+@navToggleHeight: 3px;
+@navToggleMarginBottom: @navToggleHeight * 2;
+@navMobileMargin: 15px;
+@mobileNavBackground: lighten(@headerBackground, 3%);

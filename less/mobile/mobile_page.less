@@ -1,0 +1,110 @@
+main {
+  .page_heading {
+    padding: 30px 0;
+  }
+  .mobile_category {
+    margin-bottom: 35px;
+    padding: 40px 0;
+    background: @backgroundGray;
+    .mobile_category_list {
+      margin-bottom: 25px;
+      ul {
+        li {
+          border: 1px solid @grayBorder;
+          float: left;
+          width: 25%;
+          height: 45px;
+          box-sizing: border-box;
+          padding-left: 5px;
+          a {
+            line-height: 1;
+            font-family: @boldFont;
+            text-decoration: none;
+            color: @black;
+            .link_hover();
+            font-size: @baseFontSize + 2;
+          }
+          &.active {
+            border-color: @black;
+            a {
+              color: @baseColor;
+            }
+          }
+        }
+      }
+      @media screen and (max-width: @xsScreen) {
+        ul {
+          li {
+            a {
+              font-size: @baseFontSize - 5;
+            }
+          }
+        }
+      }
+    }
+  }
+  .search {
+    input.base_input {
+      width: 70%;
+    }
+    button.base {
+      width: 30%;
+    }
+    margin-bottom: 30px;
+  }
+  .mobile_template_list {
+    margin-bottom: 50px;
+    .mobile_template_item {
+      .item_thumb {
+        margin-bottom: 25px;
+        overflow: hidden;
+        max-height: 350px;
+      }
+      .item_heading {
+        color: @baseColor;
+        margin-bottom: 25px;
+        .align();
+      }
+      .item_actions {
+        .button {
+          height: 55px;
+          width: 48%;
+        }
+      }
+    }
+  }
+  .pagination_block {
+    .block_wrapper {
+      padding: 0;
+    }
+    padding: 0;
+    border: none;
+    .pagination {
+      ul {
+        .margin_align();
+      }
+      padding: 25px 20px;
+      border-top: 1px solid @grayBorder;
+      border-bottom: 1px solid @grayBorder;
+      li {
+        &.arrow_icon {
+          &.left {
+            margin-right: 0;
+          }
+          &.right {
+            margin-left: 0;
+          }
+        }
+        a {
+
+        }
+      }
+    }
+    .text_block {
+      padding: 50px 0;
+      p {
+        font-size: @baseFontSize + 2;
+      }
+    }
+  }
+}

@@ -8,7 +8,32 @@
 
 
 
+.navToggle(@width: @navToggleWidth,@background: @navToggleBackground ) {
+  span {
+    display: block;
+    width: @width;
+    background: @navToggleBackground;
+    height: @navToggleHeight;
+    &:not(:last-child) {
+      margin-bottom: @navToggleMarginBottom;
+    }
+    .transition();
+  }
+  &.close {
+    span {
+      &:first-child {
+        display: none;
+      }
+      &:nth-child(2) {
+        .transform(rotate(45deg) translateY(7px));
+      }
+      &:last-child {
+        .transform(rotate(-45deg) translateY(-5px));
 
+      }
+    }
+  }
+}
 
 .makeGrid(@index) {
   width: 100% / (12 / @index);
@@ -86,6 +111,13 @@
   -o-transform: @prop;
   -ms-transform: @prop;
 }
+.transformMore(@prop1, @prop2) {
+  transform: @prop1, @prop2;
+  -webkit-transform: @prop1, @prop2;
+  -moz-transform: @prop1, @prop2;
+  -o-transform: @prop1, @prop2;
+  -ms-transform: @prop1, @prop2;
+}
 
 .shadow(@prop: @baseShadow) {
   box-shadow: @prop;
@@ -97,6 +129,10 @@
 
 
 // hovers
+
+.filter_hover() {
+
+}
 
 .link_hover(@color: @baseColor) {
   .transition();

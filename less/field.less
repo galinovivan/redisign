@@ -18,5 +18,61 @@ input {
     width: @inputMediumWidth * 0.8;
     }
   }
+}
 
+.select {
+  position: relative;
+  padding: 15px;
+  &.base {
+    border: 1px solid @baseColor;
+    background: url('../img/arrow_bottom.png') no-repeat 95% center @white;
+    color: @selectBaseColor;
+    span {
+      font-size: @selectFontSize;
+    }
+  }
+  &.large {
+    width: @largeSelectWidth;
+  }
+  .select_content {
+    padding: 25px 0 40px 0;
+    width: 100%;
+    background: @selectContentBackground;
+    position: absolute;
+    left: 0;
+    top: 55px;
+    .shadow(@selectShadow);
+    .select_list {
+      box-sizing: border-box;
+      &.double {
+        width: 49%;
+        display: inline-block;
+      }
+      li {
+        cursor: pointer;
+        padding: 12.5px 0 12.5px 20px;
+        .transused_background_hover();
+        &:hover {
+          a {
+            color: @white;
+          }
+        }
+        a {
+          text-decoration: none;
+          color: @selectContentColor;
+          font-size: @selectContentFontSize;
+          white-space: nowrap;
+        }
+      }
+    }
+    @media screen and (max-width: @xsScreen) {
+      .select_list {
+        li {
+          a {
+            font-size: @selectContentFontSize - 6;
+          }
+        }
+      }
+    }
+  }
 }
