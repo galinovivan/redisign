@@ -1,27 +1,34 @@
 .sidebar {
   position: fixed;
   @leftPadding: 45px;
-  @bottomMargin: 26px;
+  @rightPadding: 0;
+  @bottomPadding: 15px;
+  @padding: @bottomPadding @rightPadding @bottomPadding @leftPadding;
   min-height: 100%;
   background: @backgroundGray;
   float: left;
   width: 17%;
   padding-top: 40px;
-  overflow-y: scroll;
   .clearfix();
   .list_heading {
     padding-left: @leftPadding;
-    margin-bottom: @bottomMargin;
+    margin-bottom: @bottomPadding;
   }
   .templates_list {
     li {
-      padding-left: @leftPadding;
-      margin-bottom: @bottomMargin;
+      padding: @padding;
+      .transparent_button_hover();
+      .triangle_hover();
       a {
         text-decoration: none;
         color: @black;
         font-size: @baseFontSize + 1;
-        .link_hover();
+        .transition();
+      }
+      &:hover {
+        a {
+          color: @white;
+        }
       }
     }
   }

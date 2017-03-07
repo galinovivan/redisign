@@ -1,3 +1,6 @@
+@md: 1150px;
+
+
 
 div {
   box-sizing: border-box;
@@ -97,12 +100,15 @@ div[class*="grid"] {
   .makeOffset(12);
 }
 
-@media screen and (max-width: 1240px) {
+@media screen and (max-width: @md) {
   .md_grid_5 {
     .makeGrid(5);
   }
   .md_grid_7 {
     .makeGrid(7);
+  }
+  .md_grid_6 {
+    .makeGrid(6);
   }
 }
 

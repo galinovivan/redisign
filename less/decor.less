@@ -1,0 +1,18 @@
+.decor_border {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    width: @decorBorderWidth;
+    height: @decorBorderHeight;
+    background: @decorBorderColor;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+  }
+}
+
+.triangle_right {
+  &::after {
+    .triangle_right();
+  }
+}

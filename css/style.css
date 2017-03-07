@@ -288,12 +288,15 @@ div[class*="grid"] {
 .offset_12 {
   margin-left: 100%;
 }
-@media screen and (max-width: 1240px) {
+@media screen and (max-width: 1150px) {
   .md_grid_5 {
     width: 41.66666667%;
   }
   .md_grid_7 {
     width: 58.33333333%;
+  }
+  .md_grid_6 {
+    width: 50%;
   }
 }
 .align_center {
@@ -482,6 +485,22 @@ input.medium {
     width: 216px;
   }
 }
+.decor_border {
+  position: relative;
+}
+.decor_border::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: #2b9fd8;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+.triangle_right::after {
+  border: 7px solid transparent;
+  border-left: 10px solid #2b9fd8;
+}
 .create_row {
   background: #f6f6f6;
   margin: 60px 0;
@@ -544,7 +563,6 @@ input.medium {
   float: left;
   width: 17%;
   padding-top: 40px;
-  overflow-y: scroll;
 }
 .sidebar::after {
   content: '';
@@ -558,11 +576,39 @@ input.medium {
 }
 .sidebar .list_heading {
   padding-left: 45px;
-  margin-bottom: 26px;
+  margin-bottom: 15px;
 }
 .sidebar .templates_list li {
-  padding-left: 45px;
-  margin-bottom: 26px;
+  padding: 15px 0 15px 45px;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  position: relative;
+}
+.sidebar .templates_list li:hover {
+  background: #2b9fd8;
+  color: #ffffff;
+}
+.sidebar .templates_list li::after {
+  position: absolute;
+  left: 100%;
+  top: 36%;
+  content: '';
+  opacity: 0;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  border: 7px solid transparent;
+  border-left: 10px solid #2b9fd8;
+}
+.sidebar .templates_list li::after::after {
+  border: 7px solid transparent;
+  border-left: 10px solid #2b9fd8;
+}
+.sidebar .templates_list li:hover::after {
+  opacity: 1;
 }
 .sidebar .templates_list li a {
   text-decoration: none;
@@ -573,8 +619,8 @@ input.medium {
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
 }
-.sidebar .templates_list li a:hover {
-  color: #2b9fd8;
+.sidebar .templates_list li:hover a {
+  color: #ffffff;
 }
 @media screen and (max-width: 1400px) {
   .sidebar .list_heading {
@@ -718,10 +764,10 @@ main {
   padding-right: 40px;
 }
 .main_wrapper .pagination_block .text_block p {
-  line-height: 1.7;
+  line-height: 1.8;
 }
 .main_wrapper .text_panel p {
-  line-height: 1.7;
+  line-height: 1.8;
 }
 .main_wrapper .text_panel .text_description {
   margin-bottom: 50px;
