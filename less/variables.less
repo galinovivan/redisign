@@ -1,13 +1,14 @@
-@xsScreen: 600px;
+@xsScreen: 991px;
 @smScreen: 991px;
 @xsGridPadding: 0 20px;
-
+@smGridPadding: 0 30px;
 // fonts
 @baseFont: 'open-sans';
 @lightFont: 'open-sans-light';
 @mediumBold: 'open-sans-bold';
 @boldFont: 'open-sans-semibold';
-@h1Font: 'gotham-pro';
+@gothamLight: 'gotham-pro';
+@h1Font: @gothamLight;
 
 
 
@@ -25,15 +26,18 @@
 
 @baseLineHeight: 1.3;
 @mediumLineHeight: @baseLineHeight + 0.5;
+@largeLiheHeight: @baseLineHeight + 1;
 
 
 
 // colors
 @white: #ffffff;
 @black: #000000;
+@grayText: #9ea0a7;
 @baseColor: #2b9fd8;
 @altBaseColor: #e2353b;
 @backgroundGray: #f6f6f6;
+@lightGray: #fafafa;
 @borderColor: #2b2b2b;
 @grayBorder: #dcdcdc;
 @footerColor: @white;
@@ -53,6 +57,7 @@
 @headerHeight: 65px;
 
 //footer
+@footerHeight: 690px;
 @mobileFooterHeight: 300px;
 
 // inputs
@@ -93,7 +98,7 @@
 @paginationFontFamily: @boldFont;
 @paginationBorder: @baseBorder;
 //
-@lightPersentForTransusedHover: 5%;
+@darkPersentForTransusedHover: 5%;
 @baseTransitionDurations: 0.2s;
 @baseBorder: 1px solid @borderColor;
 
@@ -111,7 +116,7 @@
 @decoreBorderMarginBottom: 30px;
 @triangleWeight: 7px;
 
-
+@baseBrightnessHover: 110%;
 // nav
 @navFontColor: @white;
 @navFontSize: @baseFontSize - 2;
@@ -122,3 +127,9 @@
 @navToggleMarginBottom: @navToggleHeight * 2;
 @navMobileMargin: 15px;
 @mobileNavBackground: lighten(@headerBackground, 3%);
+
+
+
+// slider
+
+@slideHeight: 325px;

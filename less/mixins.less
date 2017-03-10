@@ -126,12 +126,19 @@
   -o-box-shadow: @prop;
 }
 
-
+.filter(@prop) {
+  filter: @prop;
+  -moz-filter: @prop;
+  -webkit-filter: @prop;
+}
 
 // hovers
 
-.filter_hover() {
-
+.filter_hover(@filter: brightness(@baseBrightnessHover)) {
+  .transition();
+  &:hover {
+    .filter(@filter);
+  }
 }
 
 .link_hover(@color: @baseColor) {
@@ -202,6 +209,6 @@
 .transused_background_hover(@color: @baseColor, @duration: @baseTransitionDurations) {
   .transition(all, @duration);
   &:hover {
-    background: lighten(@color, @lightPersentForTransusedHover);
+    background: darken(@color, @darkPersentForTransusedHover);
   }
 }

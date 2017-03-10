@@ -4,6 +4,7 @@
       font-size: @navFontSize;
       color: @navFontColor;
       text-decoration: none;
+      font-family: @baseFont;
     }
   }
   @media screen and (max-width: @xsScreen) {
@@ -16,8 +17,26 @@
       }
     }
   }
-}
 
+  &.base {
+    ul {
+      height: @headerHeight;
+      li {
+        a {
+          text-transform: uppercase;
+          font-weight: 800;
+          .link_hover();
+        }
+      }
+    }
+    .button {
+      font-size: @baseFontSize - 2;
+      height: 30px;
+      padding: 0;
+      font-weight: 800;
+    }
+  }
+}
 
 .nav_toggle {
   .navToggle();

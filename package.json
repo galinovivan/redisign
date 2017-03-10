@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap-less": "^3.3.8",
+    "itemslide": "^1.4.0",
     "jquery": "^3.1.1"
   }
 }

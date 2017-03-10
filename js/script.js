@@ -1,6 +1,12 @@
 (function( $ ) {
 
 	$(document).ready(function() {
+		
+
+
+
+
+
 		var toggle = $('#navToggle'),
 			nav = $('#mobileNav');
 		initMobileNav(toggle, nav);

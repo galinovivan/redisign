@@ -46,6 +46,9 @@ h5 {
 .medium_font_size {
   font-size: @mediumFontSize;
 }
+.gotham_light {
+  font-family: @gothamLight;
+}
 
 
 a {
@@ -63,5 +66,19 @@ a {
 .page_heading {
   * {
     color: @baseColor;
+  }
+  &.big_margin {
+    padding: 50px 0;
+  }
+  &.with_back_link {
+   .wrapper {
+     position: relative;
+     padding-left: 25px;
+   }
+    .align();
+    .back_link {
+      position: absolute;
+      left: 0;
+    }
   }
 }

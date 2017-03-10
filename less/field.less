@@ -65,7 +65,16 @@ input {
         }
       }
     }
-    @media screen and (max-width: @xsScreen) {
+    @media screen and (min-width: 600px) and (max-width: @smScreen) {
+      .select_list {
+        li {
+          a {
+            font-size: @baseFontSize + 6;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 599px) {
       .select_list {
         li {
           a {
