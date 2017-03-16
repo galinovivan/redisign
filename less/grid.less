@@ -65,6 +65,7 @@ div {
 
 div[class*="grid"] {
   float: left;
+  min-height: 1px;
 }
 
 .grid_1 {
@@ -157,6 +158,26 @@ div[class*="grid"] {
 @media screen and (max-width: @xsScreen) {
   .xs_grid_12 {
     .makeGrid(12);
+  }
+}
+@media screen and (max-width: @xsScreen) {
+  .xs_grid_6 {
+    .makeGrid(6);
+  }
+}
+@media screen and (max-width: @xsScreen) {
+  .xs_grid_2 {
+    .makeGrid(2);
+  }
+}
+@media screen and (max-width: @xsScreen) {
+  .xs_grid_10 {
+    .makeGrid(10);
+  }
+}
+@media screen and (max-width: @xsScreen) {
+  .xs_grid_9 {
+    .makeGrid(9);
   }
 }
 

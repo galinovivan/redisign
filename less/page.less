@@ -186,3 +186,272 @@ main {
    }
   }
 }
+
+.main_page {
+  .page_heading {
+    margin-bottom: 30px;
+  }
+  .top_banner {
+    margin-bottom: 90px;
+    background: @lightGray;
+    padding: 40px 0 0 0;
+    .top_contact {
+      margin-bottom: 30px;
+      .number {
+        font-size: @baseFontSize + 2;
+        display: inline-block;
+        margin-right: 10px;
+      }
+      span {
+        font-size: @baseFontSize - 2;
+      }
+    }
+    .top_slider {
+      position: relative;
+      .text_content {
+        p {
+          font-size: @baseFontSize + 4;
+          line-height: @mediumLineHeight;
+        }
+        margin-bottom: 40px;
+      }
+      .create {
+        margin-bottom: 40px;
+        & + div {
+          span {
+            font-size: @baseFontSize + 2;
+            line-height: @mediumLineHeight;
+          }
+        }
+      }
+      .login {
+        margin: 40px 0;
+        .button {
+          width: @smallButtonWidth + 30px;
+        }
+      }
+    }
+  }
+  .create_slide {
+    position: relative;
+    background: @footerBackground;
+    padding: 90px 0 70px 0;
+    .heading {
+      h2 {
+        color: @white;
+        .align();
+      }
+    }
+    .slides {
+      .title {
+        margin: 40px 0 100px 0;
+        h5 {
+          color: @white;
+          font-weight: 700;
+          .align();
+        }
+      }
+    }
+    .text_content {
+      p {
+        color: @white;
+        font-weight: 700;
+        font-size: @baseFontSize + 2;
+        line-height: @mediumLineHeight;
+      }
+    }
+    .carousel-indicators {
+      bottom: 250px;
+    }
+    .carousel-control {
+      &.left {
+        top: 35%;
+      }
+      &.right {
+        top: 35%;
+      }
+    }
+  }
+  .review_slider {
+    position: relative;
+    padding: 100px 0;
+    .user_info {
+      padding: 8px;
+      font-size: @baseFontSize + 2;
+      .name {
+        line-height: @mediumLineHeight;
+        .site_source {
+          font-weight: 800;
+        }
+      }
+    }
+    .review_content {
+      padding-bottom: 100px;
+      position: relative;
+      padding-top: 60px;
+      padding-right: 25px;
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 20px;
+        background: url('../img/char.png') no-repeat;
+        top: 20px;
+        left: 38%;
+      }
+      p {
+        font-size: @baseFontSize + 2;
+        line-height: @mediumLineHeight;
+      }
+    }
+    .carousel-indicators {
+      li {
+        border-color: @baseColor;
+        &.active {
+          background: @baseColor;
+        }
+      }
+    }
+    .learn_more {
+      margin-top: 20px;
+      .button {
+        .margin_align();
+      }
+    }
+  }
+  .text_panel {
+    padding-bottom: 100px;
+    p {
+      font-size: @baseFontSize + 2;
+      line-height: @mediumLineHeight;
+      padding-right: 50px;
+    }
+  }
+  .advantage {
+    padding: 75px 0 100px 0;
+    background: @baseColor;
+    p, h2 {
+      color: @white;
+    }
+    p {
+      font-size: @baseFontSize + 2;
+      font-weight: 800;
+      line-height: @mediumLineHeight;
+      vertical-align: middle;
+      padding-right: 50px;
+    }
+    .heading {
+      margin-bottom: 70px;
+    }
+    .advantage_list {
+      .item {
+        margin-bottom: 50px;
+        height: 80px;
+      }
+    }
+    .create_button {
+      margin-top: 30px;
+      .button {
+        .margin_align();
+        font-size: @baseFontSize + 1;
+      }
+    }
+  }
+  .news {
+    padding: 80px 0;
+    .heading {
+      margin-bottom: 70px;
+    }
+    .date {
+        display: block;
+        width: 120px;
+        padding: 15px;
+        box-sizing: border-box;
+        background: @lightGray;
+        margin-bottom: 20px;
+        .align();
+      span {
+        font-size: @baseFontSize + 2;
+      }
+    }
+    .title {
+      margin-bottom: 30px;
+      padding-right: 70px;
+      h5 {
+        color: @baseColor;
+        line-height: @mediumLineHeight;
+      }
+    }
+    .content {
+      margin-bottom: 40px;
+      p {
+        font-size: @baseFontSize + 2;
+        line-height: @mediumLineHeight;
+      }
+    }
+    .button {
+      .margin_align();
+    }
+  }
+  .about_host {
+    background: @lightGray;
+    padding: 90px;
+    .heading {
+      margin-bottom: 60px;
+    }
+    .text {
+      p {
+        font-size: @baseFontSize + 2;
+        line-height: @mediumLineHeight;
+        margin-bottom: 25px;
+      a {
+        display: block;
+      }
+      }
+    }
+  }
+  .instruction_block {
+    padding: 100px 0;
+  }
+  .heading {
+    margin-bottom: 60px;
+  }
+  .instruction_item {
+    .icon {
+      height: 130px;
+      margin-bottom: 35px;
+      * {
+        .margin_align();
+      }
+    }
+    .text {
+      padding-right: 20px;
+      p {
+        line-height: @mediumLineHeight;
+      }
+    }
+  }
+  .help_block {
+    padding: 70px 0;
+    background: @lightGray;
+     a {
+       font-size: @baseFontSize + 2;
+       line-height: @mediumLineHeight;
+     }
+  }
+  .payment_row {
+    padding: 100px 0;
+  }
+  .site_harmonic {
+    padding-bottom: 70px;
+    .text {
+      margin-top: 80px;
+      p {
+        margin-bottom: 40px;
+        font-size: @baseFontSize + 2;
+        line-height: @mediumLineHeight;
+      }
+    }
+  }
+}

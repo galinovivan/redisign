@@ -8,3 +8,46 @@
     }
   }
 }
+
+
+.carousel-control {
+  height: 30px;
+  background-image: none !important;
+  text-shadow: none;
+  box-shadow: none;
+  &.left {
+    top: 35%;
+    left: 80px;
+  }
+  &.right {
+    top: 35%;
+    right: 80px;
+  }
+  * {
+    display: inline-block;
+  }
+  @media screen and (max-width: 991px) {
+    opacity: 1;
+    top: auto !important;
+    bottom: -50px;
+    &.left {
+      left: 0;
+    }
+    &.right {
+      right: 0;
+    }
+  }
+}
+
+.carousel-indicators {
+  li {
+    width: 6px !important;
+    height: 6px !important;
+    margin: 1px !important;
+    margin-right: 5px !important;
+
+  }
+  @media screen and (max-width: 991px) {
+    bottom: -45px;
+  }
+}

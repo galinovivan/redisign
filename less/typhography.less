@@ -7,11 +7,18 @@ li {
   color: @black;
 }
 
+strong {
+  font-family: @gothamBold;
+}
+
 h1 {
   font-size: @h1FontSize;
   font-family: @h1Font;
   @media screen and (max-width: @xsScreen) {
     font-size: @xsH1FontSize;
+  }
+  &.large {
+    font-size: @h1BigFontSize;
   }
 }
 h2 {
@@ -36,10 +43,17 @@ h5 {
 .medium_font {
   font-family: @mediumBold;
 }
+.base_font {
+  font-family: @baseFont;
+}
 .bold_font {
   font-family: @boldFont;
 }
 
+.base_link {
+  color: @baseColor;
+  text-decoration: none;
+}
 .base_font_size {
   font-size: @baseFontSize;
 }
@@ -50,6 +64,9 @@ h5 {
   font-family: @gothamLight;
 }
 
+.gray_text {
+  color: @grayText;
+}
 
 a {
   cursor: pointer;
